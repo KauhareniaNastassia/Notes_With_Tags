@@ -1,0 +1,16 @@
+@import "src/common/styles/variables/variables";
+
+@mixin text($fontSize, $lineHeight, $fontWeight, $color,$font-style) {
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    font-weight: $fontWeight;
+    color: $color;
+    font-style: $font-style;
+}
+
+
+@mixin button ($width, $height) {
+    width: $width;
+    height:$height;
+    text-transform: uppercase;
+}

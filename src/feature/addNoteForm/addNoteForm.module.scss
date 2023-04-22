@@ -1,0 +1,57 @@
+@import "src/common/styles/mixins/mixins";
+@import "src/common/styles/variables/variables";
+
+.addNoteForm__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .addNoteForm__sticker_img {
+    position: relative;
+    width: 300px;
+    height: 310px;
+  }
+
+  .addNoteForm__form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    top: 50px;
+    right: 20px;
+    transform: rotate(-2deg);
+
+
+    .addNoteForm__form_note_name {
+      width: 260px;
+      border: none;
+      background-color: transparent;
+      @include text(16px, 1.2, 600, $main-text-color, italic);
+
+      &::placeholder {
+        font-style: italic;
+      }
+
+      &:focus,
+      &:active{
+        outline:none;
+      }
+    }
+
+    .addNoteForm__form_note {
+      height: 200px;
+      width: 250px;
+      border: none;
+      background-color: transparent;
+      @include text(16px, 1.2, 500, $main-text-color,italic);
+
+      &::placeholder {
+        font-style: italic;
+      }
+
+      &:focus,
+      &:active{
+        outline:none;
+      }
+    }
+  }
+}
