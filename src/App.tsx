@@ -4,9 +4,26 @@ import corkBoard from '../src/assets/img/brown-pinboard.png'
 import {AddNoteForm} from "./feature/addNoteForm/addNoteForm";
 
 
+export type noteDataType = {
+    title: string,
+    note: string,
+    tag?: string[]
+}
+
 const App:React.FC = () => {
 
-    const [note, setNote] = useState([])
+    const [notesData, setNotesData] = useState<noteDataType[]>([])
+
+    const addNote = (data: noteDataType) => {
+       /* const noteItem = [data];
+        localStorage.setItem('Notes', JSON.stringify(noteItem));
+        setNotesData(noteItem)*/
+
+        setNotesData((prevState) => {
+            localStorage.setItem("Notes", JSON.stringify([...prevState, data]))
+            return [...prevState, data];
+        })
+    }
 
     return (
         <div className={css.app_wrapper}>
@@ -15,7 +32,7 @@ const App:React.FC = () => {
             </div>
 
             <div className={css.forms_wrapper}>
-                <AddNoteForm />
+                <AddNoteForm addNote={addNote}/>
             </div>
 
 
