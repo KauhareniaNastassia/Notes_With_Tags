@@ -9,7 +9,7 @@ type AddNoteFormPropsType = {
 
 export const AddNoteForm: React.FC<AddNoteFormPropsType> = (props) => {
     let random = Math.floor(Math.random() * 10)
-    let sticker = ArrayOfStickers.find(el => ArrayOfStickers.indexOf(el) === random)
+   // let sticker = ArrayOfStickers.find(el => ArrayOfStickers.indexOf(el) === random)
     const [title, setTitle] = useState('')
     const [note, setNote] = useState('')
 
@@ -18,7 +18,7 @@ export const AddNoteForm: React.FC<AddNoteFormPropsType> = (props) => {
 
     const onClickAddNoteHandler = (title: string, note: string) => {
         const data = {
-            title: title, note: note, tag: tags
+            title: title, note: note, tag: tags, random: random
         }
         props.addNote(data)
         setTitle('')
@@ -28,7 +28,7 @@ export const AddNoteForm: React.FC<AddNoteFormPropsType> = (props) => {
 
     return (
         <div className={css.addNoteForm__wrapper}>
-            <img src={sticker} alt='sticker' className={css.addNoteForm__sticker_img}/>
+            {/*<img src={sticker} alt='sticker' className={css.addNoteForm__sticker_img}/>*/}
 
             <div className={css.addNoteForm__form}>
                 <input

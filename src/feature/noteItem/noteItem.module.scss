@@ -1,0 +1,33 @@
+
+
+.note__wrapper {
+  position: relative;
+
+  .note__sticker_img {
+
+    width: 370px;
+    height: 370px;
+  }
+
+  .note {
+    position: absolute;
+    width: 200px;
+    height: 170px;
+    display: flex;
+    top: 50px;
+    left: 25px;
+    flex-direction: column;
+    gap: 15px;
+    transform: rotate(-2deg);
+
+    .note__title {
+      width: 240px;
+      text-align: center;
+    }
+
+    .note__message {
+      height: 200px;
+      width: 200px;
+    }
+  }
+}
