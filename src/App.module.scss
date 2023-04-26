@@ -1,28 +1,22 @@
 
 .app_wrapper {
   display: grid;
-  grid-template-columns: 20% 78%;
+  grid-template-columns: 20% 78.5%;
   grid-column-gap: 20px;
   grid-template-areas:
                "toolsBar notes";
 
-
-  .board_wrapper {
-    grid-area: notes;
-   // background-color: lemonchiffon;
-   // width: 80%;
-   // left: 100px;
-
     .notes_wrapper {
-      background-color: lemonchiffon;
+      grid-area: notes;
+      background-color: rgba(188, 143, 143, 0.49);
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 25px;
       padding: 10px;
-      //height: 100vh;
+      min-height: 100vh;
     }
-  }
+
 
 
 }

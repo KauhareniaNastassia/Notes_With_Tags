@@ -1,5 +1,5 @@
 import React from "react";
-import {AddNoteForm} from "../addNoteForm/addNoteForm";
+import {AddNoteForm} from "./addNoteForm/addNoteForm";
 import {noteDataType} from "../../App";
 import css from './toolsBar.module.scss'
 
@@ -10,7 +10,10 @@ type ToolsBarPropsType = {
 export const ToolsBar:React.FC<ToolsBarPropsType> = ({addNote}) => {
     return (
         <div className={css.toolsBar__wrapper}>
-            <AddNoteForm addNote={addNote}/>
+            <h1 className={css.toolsBar__title}>Запиши свои мысли, чтобы не забыть=)</h1>
+            <AddNoteForm
+                addNote={addNote}
+            />
         </div>
     )
 }

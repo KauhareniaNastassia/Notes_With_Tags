@@ -1,4 +1,4 @@
-import sticker1 from '../assets/img/stickers/image11.png'
+import sticker1 from '../assets/img/stickers/image1.png'
 import sticker2 from '../assets/img/stickers/image2.png'
 import sticker3 from '../assets/img/stickers/image3.png'
 import sticker4 from '../assets/img/stickers/image4.png'
@@ -8,8 +8,7 @@ import sticker7 from '../assets/img/stickers/image7.png'
 import sticker8 from '../assets/img/stickers/image8.png'
 import sticker9 from '../assets/img/stickers/image9.png'
 import sticker10 from '../assets/img/stickers/image10.png'
-import sticker12 from '../assets/img/stickers/image12.png'
-import sticker13 from '../assets/img/stickers/image13.png'
+
 
 export let ArrayOfStickers = [
     sticker1,
@@ -21,7 +20,5 @@ export let ArrayOfStickers = [
     sticker7,
     sticker8,
     sticker9,
-    sticker10,
-    sticker12,
-    sticker13
+    sticker10
 ]

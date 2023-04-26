@@ -1,32 +1,27 @@
-@import "src/common/styles/mixins/mixins";
-@import "src/common/styles/variables/variables";
+@import "../../../common/styles/mixins/mixins";
+@import "../../../common/styles/variables/variables";
 
 .addNoteForm__wrapper {
   display: flex;
   flex-direction: column;
-  position: fixed;
-
- /* .addNoteForm__sticker_img {
-    position: relative;
-    width: 300px;
-    height: 310px;
-  }*/
+  align-items: center;
+  gap: 25px;
 
   .addNoteForm__form {
-
     display: flex;
     flex-direction: column;
     gap: 15px;
     top: 50px;
     right: 20px;
-
-
+    width: 100%;
 
     .addNoteForm__form_note_name {
-      width: 260px;
       border: none;
+      padding: 10px;
+      border-bottom: 1px solid #363636;
       background-color: transparent;
       @include text(16px, 1.2, 600, $main-text-color, italic);
+      word-break:break-all;
 
       &::placeholder {
         font-style: italic;
@@ -39,11 +34,12 @@
     }
 
     .addNoteForm__form_note {
+      padding: 10px;
       height: 200px;
-      width: 250px;
       border: none;
       background-color: transparent;
       @include text(16px, 1.2, 500, $main-text-color,italic);
+      word-break:break-all;
 
       &::placeholder {
         font-style: italic;
@@ -52,7 +48,24 @@
       &:focus,
       &:active{
         outline:none;
+        border: 1px solid #A7A7A7;
+        border-radius: 10px;
+        background-color: #faf7de;
       }
+    }
+  }
+
+  .addNoteForm__form_note_button {
+    width: 50%;
+    border: none;
+    @include text(16px, 1.2, 500, $main-text-color, italic);
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f8ed8b;
+
+    &:hover,
+    &:active {
+      background-color: #eedc51;
     }
   }
 }

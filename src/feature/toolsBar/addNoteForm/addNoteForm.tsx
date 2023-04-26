@@ -1,15 +1,17 @@
 import React, {useState} from "react";
 import css from './addNoteForm.module.scss'
-import {ArrayOfStickers} from "../../utils/arrayOfStickers";
-import {noteDataType} from "../../App";
+import {noteDataType} from "../../../App";
+
+
 
 type AddNoteFormPropsType = {
     addNote: ( data: noteDataType) => void
+
 }
 
 export const AddNoteForm: React.FC<AddNoteFormPropsType> = (props) => {
     let random = Math.floor(Math.random() * 10)
-   // let sticker = ArrayOfStickers.find(el => ArrayOfStickers.indexOf(el) === random)
+
     const [title, setTitle] = useState('')
     const [note, setNote] = useState('')
 
@@ -18,12 +20,13 @@ export const AddNoteForm: React.FC<AddNoteFormPropsType> = (props) => {
 
     const onClickAddNoteHandler = (title: string, note: string) => {
         const data = {
-            title: title, note: note, tag: tags, random: random
+          title: title, note: note, tag: tags, random: random
         }
         props.addNote(data)
         setTitle('')
         setNote('')
     }
+
 
 
     return (
@@ -48,6 +51,7 @@ export const AddNoteForm: React.FC<AddNoteFormPropsType> = (props) => {
             </div>
 
             <button
+                className={css.addNoteForm__form_note_button}
                 onClick={() => onClickAddNoteHandler(title, note)}
             >Сохранить</button>
 

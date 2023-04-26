@@ -1,10 +1,20 @@
+@import "src/common/styles/mixins/mixins";
+@import "src/common/styles/variables/variables";
 
 
 .toolsBar__wrapper {
   grid-area: toolsBar;
   position: fixed;
-  top: 20px;
-  left: 10px;
-  background-color: darksalmon;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: lemonchiffon;
+  padding: 10px 20px;
+  min-height: 100vh;
+
+  .toolsBar__title {
+    width: 270px;
+    @include text(18px, 1.2, 600, $main-text-color, italic);
+    text-align: center;
+  }
 }
